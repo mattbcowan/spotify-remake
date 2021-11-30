@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import LeftSideBar from "./components/LeftSideBar";
-import Home from "./components/Home";
+import RightSideBar from "./components/RightSideBar";
+import Home from "./components/pages/Home";
 
 const data = {
   playlists: ["Discover Weekly", "Rainy Day"],
@@ -17,6 +18,7 @@ function App() {
     <Grid>
       <LeftSideBar data={data} />
       <Home />
+      <RightSideBar />
     </Grid>
   );
 }
