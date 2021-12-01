@@ -2,9 +2,19 @@ import styled from "styled-components";
 import { FaFacebookF } from "react-icons/fa";
 
 const Container = styled.div`
+  color: #fff;
   background-color: #181818;
   padding: 1rem;
-  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(15%);
+  height: 100vh;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
 `;
 
 const FriendsHeader = styled.span`

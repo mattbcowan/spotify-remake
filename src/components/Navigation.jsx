@@ -11,6 +11,8 @@ const NavigationButton = styled.div`
   font-size: 30px;
   color: #fff;
   border-radius: 2em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
 `;
 
 const NavButtonContainer = styled.div`

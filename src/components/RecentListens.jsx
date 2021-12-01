@@ -1,11 +1,15 @@
 import styled from "styled-components";
-import LongAlbumButton from "./components/LongAlbumButton";
+import LongAlbumButton from "./LongAlbumButton";
 
 const RecentContainer = styled.div`
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 `;
 
 const RecentListens = ({ data }) => {

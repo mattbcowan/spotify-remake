@@ -6,6 +6,7 @@ const StyledListItem = styled.li`
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   cursor: pointer;
   transition: color 0.5s;
@@ -19,8 +20,12 @@ const StyledListItem = styled.li`
     font-size: 1.5rem;
   }
 
-  span {
-    margin-left: 1rem;
+  @media (min-width: 768px) {
+    flex-direction: row;
+
+    span {
+      margin-left: 1rem;
+    }
   }
 `;
 

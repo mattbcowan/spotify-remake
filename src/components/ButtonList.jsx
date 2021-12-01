@@ -20,10 +20,18 @@ const data = [
 const StyledUl = styled.ul`
   list-style: none;
   font-size: 1rem;
-  border-bottom: 1px solid #494949;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
 
   &:last-child {
     padding-bottom: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    display: block;
+    border-bottom: 1px solid #494949;
+    width: auto;
   }
 `;
 
