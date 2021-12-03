@@ -1,5 +1,4 @@
 import LeftSideBar from "./components/LeftSideBar";
-import RightSideBar from "./components/RightSideBar";
 import Home from "./components/pages/Home";
 
 const data = {
@@ -11,7 +10,6 @@ function App() {
     <div>
       <LeftSideBar data={data} />
       <Home />
-      <RightSideBar />
     </div>
   );
 }

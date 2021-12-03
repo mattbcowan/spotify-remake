@@ -8,6 +8,10 @@ const RecentContainer = styled.div`
   grid-template-rows: auto;
 
   @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 1200px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `;

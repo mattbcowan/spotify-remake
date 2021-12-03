@@ -7,24 +7,37 @@ import Navigation from "../Navigation";
 import ShowList from "../ShowList";
 
 const Container = styled.div`
-  padding: 2rem;
+  padding: 1rem;
   background: linear-gradient(0deg, #252525 40%, #836215 100%);
   height: 100vh;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
 `;
 
 const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 2fr 8fr 2fr;
-  grid-template-rows: auto;
-  margin-bottom: 8em;
+  display: flex;
+  padding-bottom: 8rem;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 20vw auto;
+  }
 `;
 
 const Header = styled.header`
   display: none;
 
   @media (min-width: 768px) {
-    display: block;
+    display: flex;
+    justify-content: center;
   }
+`;
+
+const Page = styled.div`
+  grid-column-start: 2;
+  margin: 1rem;
 `;
 
 const data = [
@@ -123,18 +136,13 @@ const Home = () => {
   return (
     <Container>
       <Grid>
-        <div></div>
-        <div>
+        <Page>
+          <Navigation />
           <Header>
-            <div>
-              <Navigation />
-              <div>
-                <FlexableImage
-                  src="https://via.placeholder.com/1200x270"
-                  alt="Banner"
-                />
-              </div>
-            </div>
+            <FlexableImage
+              src="https://via.placeholder.com/1200x270"
+              alt="Banner"
+            />
           </Header>
           <main>
             <section>
@@ -147,8 +155,7 @@ const Home = () => {
               })}
             </section>
           </main>
-        </div>
-        <div></div>
+        </Page>
       </Grid>
     </Container>
   );

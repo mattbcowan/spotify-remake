@@ -10,6 +10,11 @@ const Container = styled.div`
 `;
 
 const AlbumCover = styled.img`
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   border-radius: 1rem;
 `;
 
@@ -22,7 +27,11 @@ const AlbumInfoContainer = styled.div`
 const FatShowButton = () => {
   return (
     <Container>
-      <AlbumCover src="https://via.placeholder.com/160" alt="Album Cover" />
+      <AlbumCover
+        src="https://via.placeholder.com/160"
+        alt="Album Cover"
+        draggable="false"
+      />
       <AlbumInfoContainer>
         <div>Title</div>
         <div>Extra info</div>

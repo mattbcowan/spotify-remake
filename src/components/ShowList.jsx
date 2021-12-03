@@ -1,12 +1,15 @@
+import { useRef } from "react";
 import styled from "styled-components";
+import useDraggableScroll from "use-draggable-scroll";
 import FatShowButton from "./FatShowButton";
 
 const Container = styled.div`
   overflow: hidden;
-  width: 320px;
+  width: 75vw;
 
   @media (min-width: 768px) {
-    width: auto;
+    width: 70vw;
+    cursor: grab;
   }
 `;
 
@@ -31,16 +34,7 @@ const ShowsContainer = styled.div`
   }
 
   @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 1em;
-    overflow-x: visible;
     scroll-snap-type: none;
-
-    div {
-      width: auto;
-    }
   }
 `;
 
@@ -52,10 +46,12 @@ const ListName = styled.h2`
 `;
 
 const ShowList = ({ data }) => {
+  const ref = useRef(null);
+  const { onMouseDown } = useDraggableScroll(ref);
   return (
     <Container>
       <ListName>{data.listName}</ListName>
-      <ShowsContainer>
+      <ShowsContainer ref={ref} onMouseDown={onMouseDown}>
         {data.albums.map((i) => {
           return <FatShowButton key={i} />;
         })}
