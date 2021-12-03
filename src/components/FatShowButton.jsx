@@ -10,11 +10,7 @@ const Container = styled.div`
 `;
 
 const AlbumCover = styled.img`
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
+  pointer-events: none;
   border-radius: 1rem;
 `;
 

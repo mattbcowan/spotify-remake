@@ -9,7 +9,6 @@ const Container = styled.div`
 
   @media (min-width: 768px) {
     width: 70vw;
-    cursor: grab;
   }
 `;
 
@@ -21,6 +20,7 @@ const ShowsContainer = styled.div`
   scrollbar-width: none;
   transform-origin: center center;
   transition: transform 0.5s;
+  cursor: grab;
 
   div {
     scroll-snap-align: start;
