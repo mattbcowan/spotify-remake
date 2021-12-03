@@ -37,6 +37,10 @@ const ShowsContainer = styled.div`
     gap: 1em;
     overflow-x: visible;
     scroll-snap-type: none;
+
+    div {
+      width: auto;
+    }
   }
 `;
 
