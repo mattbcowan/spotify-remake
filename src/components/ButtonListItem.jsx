@@ -30,7 +30,8 @@ const StyledListItem = styled.li`
 `;
 
 const ActiveStyledListItem = styled(StyledListItem)`
-  background-color: #464646;
+  transition: all 0.3s;
+  background-color: #616161;
   color: #fff;
 `;
 

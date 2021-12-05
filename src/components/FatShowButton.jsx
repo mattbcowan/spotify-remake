@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  background-color: #4b4b4b;
+  background-color: #616161;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
   border-radius: 0.25rem;
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: #797979;
+  }
 `;
 
 const AlbumCover = styled.img`

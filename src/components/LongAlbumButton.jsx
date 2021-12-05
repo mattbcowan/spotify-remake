@@ -8,6 +8,12 @@ const Container = styled.div`
   background-color: #616161;
   border-radius: 0.25rem;
   overflow: hidden;
+  transition: background-color 0.5s;
+  cursor: default;
+
+  &:hover {
+    background-color: #797979;
+  }
 `;
 
 const RecentListenText = styled.span`
